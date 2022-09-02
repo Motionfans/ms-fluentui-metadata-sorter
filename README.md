@@ -10,6 +10,7 @@ Run ``node .`` and the script will compile all the data.
 ## Example of using the metadata in reactjs
 
 ```
+const emojis = require('../emojis.json');
 let contentItems = emojis.map((data) => {
     if (!data.mappedToEmoticons) { return; }
     const cldr = data.mappedToEmoticons.toString().toLowerCase().replaceAll(" ", "_").replaceAll(/[^a-zA-Z0-9_-]/g, '');;
